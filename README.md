@@ -4,13 +4,13 @@ A collection of shell scripts designed to automate system operations and enhance
 
 ### Option 1
 
-Copy paste the content of the files into either your .bashrc or your .zshrc depending on what **shell** you are using.
+Copy paste the content of the files into either your `.bashrc` or your `.zshrc` depending on what **shell** you are using.
 
 ### Option 2
 
-- make a new directory in your home directory, call it `gnulinux-utils` for instance.\
+- make a new directory in your home directory, call it `gnulinux-utils`, for instance.
   `mkdir` `~/gnulinux-utils`
-- make a new file for the script; for instance:\
+- make a new file for the script; for instance:
   `touch` `~/gnulinux-utils/mount-unmount-drives.sh`
 - Copy paste and save the content of same file in this repo to said file.
 
