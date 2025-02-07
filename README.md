@@ -53,10 +53,11 @@ Clone the repo in your home directory (this is the way I've set it up but you ca
   1.1  Change directory to repository\
      `cd` `gnulinux-utils`
   
-3. Append source commands for all `.sh` files in the cloned directory to `.zshrc` or `.bashrc` config file. For `.zshrc`:\
+3. Append source commands for all `.sh` files in the cloned directory to `.zshrc` or `.bashrc` config file. \
+For **.zshrc**:
       2.1 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.zshrc`\
-   
-  or for `.bashrc`\
+
+for **.bashrc**
   
       2.2 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.bashrc`
   
