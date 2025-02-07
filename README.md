@@ -59,7 +59,7 @@ For **.zshrc**:
 
       2.1 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.zshrc`
 
-for **.bashrc**:
+For **.bashrc**:
   
       2.2 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.bashrc`
   
