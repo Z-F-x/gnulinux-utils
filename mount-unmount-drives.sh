@@ -6,7 +6,7 @@
 # but it’s specifically designed to work with external drives based on the assumption
 # that the drives will be mounted under /run/media/$USER/ (a common location for 
 # external devices in many Linux distributions).
-# Requires zfz
+# Requires fzf, and sed
 
 # Function that gives fzf dropdrown of all drives found with lzblk and propts 
 # for a name of the drive to be mounted at /run/media/UserName/driveName
@@ -74,8 +74,12 @@ unmount_external() {
         return 1
     fi
 
-    # Get list of mounted partitions that belong to external devices
-    MOUNT_POINT=$(mount | grep -E "/dev/sd[b-z][0-9]*" | awk '{print $3}' | fzf --prompt="Select a drive to unmount: ")
+    # Use sed to extract the full mount point from the mount command output.
+    # This regex matches lines starting with /dev/sd[b-z][0-9]*, then extracts
+    # everything between " on " and " type".
+    MOUNT_POINT=$(mount | grep -E "^/dev/sd[b-z][0-9]* " | \
+                  sed -n 's#^/dev/sd[b-z][0-9]* on \(.*\) type.*#\1#p' | \
+                  fzf --prompt="Select a drive to unmount: ")
 
     # Exit if no selection is made
     if [[ -z "$MOUNT_POINT" ]]; then
@@ -83,11 +87,12 @@ unmount_external() {
         return 1
     fi
 
-    # Unmount the selected drive
-    echo "Unmounting $MOUNT_POINT..."
+    # Unmount the selected drive (quotes ensure that spaces are handled correctly)
+    echo "Unmounting '$MOUNT_POINT'..."
     sudo umount "$MOUNT_POINT" && echo " ✓ Drive unmounted successfully!" || echo " 𐄂 Failed to unmount!"
 }
 
 # ########################################################################### #
 #                       Mount External Drives ends                            #
 # ########################################################################### #
+
