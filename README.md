@@ -80,20 +80,30 @@ Clone the repo in your home directory (this is the way I've set it up but you ca
 # Usage:
 
 ## Mount an external drive
+![image](https://github.com/user-attachments/assets/ccbf6a0b-5795-44f1-a623-4d6b8e60debe)
 
 - Enter in your terminal:
   `mount_external`
   
 - Select the drive you want to mount from th `fzf` dropdown menu
-  
+  ![image](https://github.com/user-attachments/assets/eb653863-102b-4d0f-a857-7ac2030160d3)
+
 - Provide a drive name.\
-  
+  ![image](https://github.com/user-attachments/assets/fd6bc936-7ca9-4dbe-9364-236ade6a3316)
+
+- Drive uccessfully mounted
+![image](https://github.com/user-attachments/assets/df1602c3-5ae0-48b0-8acd-4098d45fef53)
 
 # Unmount
+![image](https://github.com/user-attachments/assets/0bc4fd75-184d-4191-a58a-dec2d5ad21af)
 
 - Enter in your terminal:
-  
 
 `unmount_external`
 
 - Select the drive you want to unmount from the fzf dropdown menu.
+![image](https://github.com/user-attachments/assets/96533b55-bcfe-4655-84dc-227f86879bc0)
+
+- Unmounted
+![image](https://github.com/user-attachments/assets/47ab7f00-a8f5-4fe2-9dd4-716cc2d9a81c)
+
