@@ -48,14 +48,15 @@ Copy paste the content of the files into either your `.bashrc` or your `.zshrc` 
 
 Clone the repo in your home directory (this is the way I've set it up but you can place it wherever you like as long as you link it to the correct path in your ur `.bashrc` or your `.zshrc` i.e., your shell config files.
 
-1. Clone the Git repository into your home directory (or any other directory just remember to link it in your script config file i.e., `.bashrc` / `.zshrc`.\
+1. Clone the Git repository into your home directory (or any other directory just remember to link it in your script config file i.e., `.bashrc` or `.zshrc`.\
   ```git clone https://github.com/Z-F-x/gnulinux-utils.git ~/```\
   1.1  Change directory to repository\
      `cd` `gnulinux-utils`
   
-3. Append source commands for all `.sh` files in the cloned directory to `.zshrc` or `.bashrc` config file:\
+3. Append source commands for all `.sh` files in the cloned directory to `.zshrc` or `.bashrc` config file. For `.zshrc`:\
       2.1 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.zshrc`\
-  or
+   
+  or for `.bashrc`\
   
       2.2 `echo "for file in ~/gnulinux-utils/*.sh; do source \$file; done" >> ~/.bashrc`
   
