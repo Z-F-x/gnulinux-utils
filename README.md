@@ -17,46 +17,31 @@ Copy paste the content of the files into either your .bashrc or your .zshrc depe
 ### Option 3: Install a specific script only
 
 1. Initialize a new Git repository (meaning in this context to create a new directory for the script files.)
-  
-
 ```cd ~/```
 ```git init gnulinux-utils ```
 
 2. Change into the repository directory
-  
-
 ```cd gnulinux-utils```
 
 3. Enable sparse-checkout mode
-  
-
 ```git sparse-checkout init --cone```
 
 4. Specify the file to check out (mount-unmount-drives.sh)
-  
-
 ```git sparse-checkout set mount-unmount-drives.sh```
 
 5. Add the remote repository
-  
-
 ```git remote add origin https://github.com/Z-F-x/gnulinux-utils.git```
 
 6. Fetch the repository content
-  
-
 ```git fetch```
 
-.7 Checkout the master branch (or another branch if needed)
-
+7. Checkout the master branch (or another branch if needed)
 ```git checkout master```
 
 8. Delete all `.sh` files except for `mount-unmount-drives.sh` (replace file name with the script/file you want installed), all other will be deleted:
   ```find . -type f -name "*.sh" ! -name "mount-unmount-drives.sh" -exec rm -f {} +```
   
 9. Verify that only mount-unmount-drives.sh is left
-  
-
 `ls *.sh`
 
 ### Option 4: Install all scripts
