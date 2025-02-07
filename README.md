@@ -91,11 +91,11 @@ Clone the repo in your home directory (this is the way I've set it up but you ca
   ![image](https://github.com/user-attachments/assets/eb653863-102b-4d0f-a857-7ac2030160d3)
 
 - Provide a drive name.
-- 
+
   ![image](https://github.com/user-attachments/assets/fd6bc936-7ca9-4dbe-9364-236ade6a3316)
 
 - Drive uccessfully mounted
-- 
+
 ![image](https://github.com/user-attachments/assets/df1602c3-5ae0-48b0-8acd-4098d45fef53)
 
 # Unmount
@@ -107,7 +107,7 @@ Clone the repo in your home directory (this is the way I've set it up but you ca
 `unmount_external`
 
 - Select the drive you want to unmount from the fzf dropdown menu.
-- 
+
 ![image](https://github.com/user-attachments/assets/96533b55-bcfe-4655-84dc-227f86879bc0)
 
 - Unmounted
