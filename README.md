@@ -2,7 +2,7 @@ A collection of shell scripts designed to automate system operations and enhance
 
 ## Installation
 
-### Option 1
+### Option 1
 
 Copy paste the content of the files into either your .bashrc or your .zshrc depending on what **shell** you are using.
 
