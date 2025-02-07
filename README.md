@@ -1,2 +1,2 @@
-# mount-utils
-Simple sh script to mount and unmount drives easily with fzf dropdown in Linux Terminal
+# A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment
+
