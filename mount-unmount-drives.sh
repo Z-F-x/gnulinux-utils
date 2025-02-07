@@ -6,11 +6,11 @@
 # but it’s specifically designed to work with external drives based on the assumption
 # that the drives will be mounted under /run/media/$USER/ (a common location for 
 # external devices in many Linux distributions).
-# Requires fzf, and sed
+# Requires fzf, and sed.
 
-# Function that gives fzf dropdrown of all drives found with lzblk and propts 
-# for a name of the drive to be mounted at /run/media/UserName/driveName
-# Note: If you have files whose paths point to this drive, mkae sure to set
+# Function that gives fzf dropdrown of all drives found with lzblk and prompts 
+# for you to set a name of the drive to be mounted at /run/media/UserName/DriveName
+# Note: If you have files whose paths points to this drive, make sure to set
 # the drive name to same name otherwise your files won't load.
 mount_external() {
     # Ensure fzf is installed
@@ -66,7 +66,7 @@ mount_external() {
     fi
 }
 
-# Function that gibs fzf dropdown of all mounted external drives
+# Function that gives fzf dropdown in terminal window of all mounted external drives
 unmount_external() {
     # Ensure fzf is installed
     if ! command -v fzf &> /dev/null; then
