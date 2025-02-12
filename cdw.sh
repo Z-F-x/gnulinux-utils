@@ -4,9 +4,6 @@
 #   Set of scripts to keep track of top 25 most used file system paths        #
 # ############################################################################ #
 
-
-
-
 remove_duplicates_and_update_visits() {
     local cd_history_file=~/.cd_history
     local cd_visits_file=~/.cd_visits
@@ -92,7 +89,6 @@ cdw() {
         echo "No directory selected."
     fi
 }
-
 
 # ############################################################################ #
 # cdw ends - Set of scripts to keep track of top 25 most used file ...         #
