@@ -1,7 +1,7 @@
 # ############################################################################ #
 #                                  cdw begins
 # ############################################################################ #
-#   Set of scripts to keep track of top 25 most used file system paths        #
+#  Custom shell extension to track and list top 25 most used file system paths #
 # ############################################################################ #
 
 remove_duplicates_and_update_visits() {
