@@ -12,6 +12,9 @@
 # for you to set a name of the drive to be mounted at /run/media/UserName/DriveName
 # Note: If you have files whose paths points to this drive, make sure to set
 # the drive name to same name otherwise your files won't load.
+
+alias mount-external="mount_external"
+
 mount_external() {
     # Ensure fzf is installed
     if ! command -v fzf &> /dev/null; then
@@ -66,7 +69,15 @@ mount_external() {
     fi
 }
 
-# Function that gives fzf dropdown in terminal window of all mounted external drives
+# ########################################################################### #
+#                         Mount External Drives END                           #
+# ########################################################################### #
+#                       Unmount External Drives BEGIN                         #
+# ########################################################################### #
+
+alias dismount-external="unmount_external"
+alias dismount_external="unmount_external"
+
 unmount_external() {
     # Ensure fzf is installed
     if ! command -v fzf &> /dev/null; then
@@ -74,25 +85,44 @@ unmount_external() {
         return 1
     fi
 
-    # Use sed to extract the full mount point from the mount command output.
-    # This regex matches lines starting with /dev/sd[b-z][0-9]*, then extracts
-    # everything between " on " and " type".
-    MOUNT_POINT=$(mount | grep -E "^/dev/sd[b-z][0-9]* " | \
-                  sed -n 's#^/dev/sd[b-z][0-9]* on \(.*\) type.*#\1#p' | \
-                  fzf --prompt="Select a drive to unmount: ")
+    # Use a broader regex to match all external devices
+    MOUNT_POINTS=$(mount | grep -E '^/dev/(sd[a-z][0-9]*|nvme[0-9]+n[0-9]+p[0-9]+|mmcblk[0-9]+p[0-9]+|mapper/.*)' | \
+                   sed -n 's#^.* on \(.*\) type.*#\1#p' | \
+                   fzf --prompt="Select a drive to unmount: ")
 
     # Exit if no selection is made
-    if [[ -z "$MOUNT_POINT" ]]; then
+    if [[ -z "$MOUNT_POINTS" ]]; then
         echo " 𐄂 No drive selected!"
         return 1
     fi
 
+    # Check if the selected mount point is root (/) or home (/home)
+    if [[ "$MOUNT_POINTS" == "/" || "$MOUNT_POINTS" == "/home" ]]; then
+        echo " ⚠️ You are about to unmount a critical system mount point: '$MOUNT_POINTS'."
+        echo "Are you sure you want to proceed? (y/n): "
+        read CONFIRM
+
+        if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
+            echo " 𐄂 Unmount operation cancelled."
+            return 1
+        fi
+    else
+        # Less severe warning for other mounts
+        echo " ⚠️ You are about to unmount the drive at '$MOUNT_POINTS'."
+        echo "Are you sure you want to proceed? (y/n): "
+        read CONFIRM
+
+        if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
+            echo " 𐄂 Unmount operation cancelled."
+            return 1
+        fi
+    fi
+
     # Unmount the selected drive (quotes ensure that spaces are handled correctly)
-    echo "Unmounting '$MOUNT_POINT'..."
-    sudo umount "$MOUNT_POINT" && echo " ✓ Drive unmounted successfully!" || echo " 𐄂 Failed to unmount!"
+    echo "Unmounting '$MOUNT_POINTS'..."
+    sudo umount "$MOUNT_POINTS" && echo " ✓ Drive unmounted successfully!" || echo " 𐄂 Failed to unmount!"
 }
 
 # ########################################################################### #
-#                       Mount External Drives ends                            #
+#                       Unmount External Drives END                           #
 # ########################################################################### #
-
