@@ -100,8 +100,9 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 #### Go to bookmark via function-key(s)
 F1, F2 F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
 
+### `mount-unmount-drives`
 
-### `mount_external` and `unmount_external`
+#### `mount_external` and `unmount_external`
 
 - Enter in your terminal:\
   `mount_external`
