@@ -177,6 +177,7 @@ ___
 
 #### `mount_external` and `unmount_external`
 
+##### Mount
 - Enter in your terminal:\
   `mount_external`
 
@@ -194,7 +195,7 @@ ___
 
 ![image](https://github.com/user-attachments/assets/df1602c3-5ae0-48b0-8acd-4098d45fef53)
 
-# Unmount
+##### Unmount
 
 ![image](https://github.com/user-attachments/assets/0bc4fd75-184d-4191-a58a-dec2d5ad21af)
 
