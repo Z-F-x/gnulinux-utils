@@ -102,7 +102,7 @@ NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
 - Enter `vlc` and select vido file from fzf dropdown
 
 NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
-
+---
 
 ### 2. **cdw**
 enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
