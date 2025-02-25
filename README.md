@@ -11,7 +11,7 @@ Play audio and video directly in (audio) from (video) terminal.
 - `cdw` – 
 Track the 25 most used file paths
 - `ls_dynamic` – 
-Clears screen and runs eza with icons; displays content of current path relieving the user from having to run `dir`, `tree`, or `ls` manually.
+Adds the `ls_dynamic` function when navigating with `cd`. It clears screen and runs eza with icons, which displays content of current path—relieving the user from having to run `dir`, `tree`, or `ls` manually to see the content of the navigated directory.
 - `mount-unmount-drives` – 
 Mount and unmount external drives
 - `terminal_bookmarks` – 
