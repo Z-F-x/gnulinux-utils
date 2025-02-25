@@ -12,6 +12,8 @@ Play audio and video directly in (audio) from (video) terminal.
 Track the 25 most used file paths
 - `ls_dynamic` – 
 Adds the `ls_dynamic` function when navigating with `cd`. It clears screen and runs eza with icons, which displays content of current path—relieving the user from having to run `dir`, `tree`, or `ls` manually to see the content of the navigated directory.
+- `ls_open` –
+A function that displays all navigable subdirectories within the current directory. 
 - `mount-unmount-drives` – 
 Mount and unmount external drives
 - `terminal_bookmarks` – 
@@ -126,32 +128,16 @@ Expected result:
 ___
 
 
-### 4. **terminal_bookmarks**
+### 4. **ls_open**
 
-#### Set bookmark at current directory
-```bookmark set 1```
+- Enter in your terminal:\
+  `ls_open`
 
-![image](https://github.com/user-attachments/assets/1db9a700-a8ee-4146-b539-353a5130651e)
+![image](https://github.com/user-attachments/assets/864afff5-2c47-45c0-af8c-8a009dbf7c18)
 
-
-
-NOTE: valid set options are `1` through `12` setting the set bookmark to the corresponding F-key.
-
-#### Go to bookmark via command
-```bookmark 1```
-
-#### See list of set bookmarks
-```bookmark```
-
-![image](https://github.com/user-attachments/assets/a787bc80-668b-4399-9ee6-499947ab681a)
-<!-- TODO: Fix this issue -->
-- NOTE: Known Issue.  Formatting is not pretty.  Will be fixed.
-
-#### Go to bookmark via function-key(s)
-`F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, `F8`, `F9`, `F10`, `F11`, and `F12`.
+Alernatively: `lsnav`, `nav`, `open`, `opendir`, `dopen`, `diropen`, `navigate`
 
 ___
-
 
 ### 5. **mount-unmount-drives**
 
@@ -191,3 +177,29 @@ ___
 
 ___
 
+
+### 6. **terminal_bookmarks**
+
+#### Set bookmark at current directory
+```bookmark set 1```
+
+![image](https://github.com/user-attachments/assets/1db9a700-a8ee-4146-b539-353a5130651e)
+
+
+
+NOTE: valid set options are `1` through `12` setting the set bookmark to the corresponding F-key.
+
+#### Go to bookmark via command
+```bookmark 1```
+
+#### See list of set bookmarks
+```bookmark```
+
+![image](https://github.com/user-attachments/assets/a787bc80-668b-4399-9ee6-499947ab681a)
+<!-- TODO: Fix this issue -->
+- NOTE: Known Issue.  Formatting is not pretty.  Will be fixed.
+
+#### Go to bookmark via function-key(s)
+`F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, `F8`, `F9`, `F10`, `F11`, and `F12`.
+
+___
