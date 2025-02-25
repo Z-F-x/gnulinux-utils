@@ -136,11 +136,11 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 ```bookmark```
 
 ![image](https://github.com/user-attachments/assets/a787bc80-668b-4399-9ee6-499947ab681a)
-<!--
+<!-- TODO: Fix this issue -->
 NOTE: Known Issue.
 Formatting is not pretty.
 Will be fixed.
--->
+
 
 
 #### Go to bookmark via function-key(s)
