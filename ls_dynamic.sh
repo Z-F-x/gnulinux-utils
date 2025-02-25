@@ -11,6 +11,11 @@
 # command.                                                                     #
 # ############################################################################ #
 
+# Set ls to clear screen and point to the ls_dynamic function
+alias ls='clear; ls_dynamic'
+
+# Navigation functionality that overwrites normal functionality of the `cd`
+# command. Clears screen inbetween each navigational step. Uses eza.
 ls_dynamic() {
     # Set the directory you want to check (use the current directory by default)
     DIR="${1:-.}"
