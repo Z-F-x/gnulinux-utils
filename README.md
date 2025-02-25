@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> `ls_dynamic` and `cdw` from `cdw.sh` and/or `ls_dynamic.sh` needs to be installed into your shell config file in order to run properly.
+> `ls_dynamic` and `cdw` from `cdw.sh` and/or `ls_dynamic.sh` needs to be present in your shell config file in order to run properly.
 > Proper keybindings must also be set up for `ls` and `cd` to run `ls_dynamic` and `cdw` respectively.
 
 # gnulinux-utils
