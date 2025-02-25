@@ -90,6 +90,9 @@ For **.bashrc**:
 - Enter `play` `audioFileName.mp3`
 - Enter `play` in a path that contains audio files and select an audio file from fzf dropdown
 
+NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
+
+
 #### Video playback
 - Enter `vlc` `videoFileName.mp4`
 
@@ -97,7 +100,7 @@ NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 
 
 ### 2. `cdw`
-enter `cdw` in terminal to view and select logged file paths.
+enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
 
 ### 3. `terminal_bookmarks`
 
