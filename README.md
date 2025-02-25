@@ -84,7 +84,22 @@ For **.bashrc**:
 
 ## Usage:
 
-### `terminal_bookmarks`
+### 1. `audio-and-video-playback`
+
+#### Audio playback
+- Enter `play` `audioFileName.mp3`
+- Enter `play` in a path that contains audio files and select an audio file from fzf dropdown
+
+#### Video playback
+- Enter `vlc` `videoFileName.mp4`
+
+NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
+
+
+### 2. `cdw`
+enter `cdw` in terminal to view and select logged file paths.
+
+### 3. `terminal_bookmarks`
 
 #### Set bookmark at current directory
 ```bookmark set 1```\
@@ -100,7 +115,7 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 #### Go to bookmark via function-key(s)
 F1, F2 F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
 
-### `mount-unmount-drives`
+### 4. `mount-unmount-drives`
 
 #### `mount_external` and `unmount_external`
 
