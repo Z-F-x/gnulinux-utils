@@ -3,21 +3,21 @@
 > - Proper keybindings must also be set up for `ls` and `cd` to run `ls_dynamic` and `cdw` respectively.
 
 # gnulinux-utils
-A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment
+A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment.
 
 ## Contents
 - `audio-and-video-playback` – 
 Play audio and video directly in (audio) from (video) terminal.
 - `cdw` – 
-Track the 25 most used file paths
+Track the 25 most used file paths.
 - `ls_dynamic` – 
 Adds the `ls_dynamic` function when navigating with `cd`. It clears screen and runs eza with icons, which displays content of current path—relieving the user from having to run `dir`, `tree`, or `ls` manually to see the content of the navigated directory.
 - `ls_ft` –
- List the content of current directory by file extension
+ List the content of current directory by file extension.
 - `ls_open` –
 A function that displays all navigable subdirectories within the current directory. 
 - `mount-unmount-drives` – 
-Mount and unmount external drives
+Mount and unmount external drives.
 - `mv_files` –
 shorthand for bulk moving all files and folders, all folders or all files respectively.
 - `terminal_bookmarks` – 
@@ -132,7 +132,30 @@ Expected result:
 ___
 
 
-### 4. **ls_open**
+### 4. **ls_ft**
+
+alias lsft="list_specific_file_type_eza" # list files by extension, requires an argument. For example: lsft .txt
+alias sbft="list_files_sort_extension" #c
+alias lsfth="list_files_sort_extension_hidden" #Lits only files by extension including hidden files, requires argument.
+alias lsfta="list_files_and_folders_sort_by_extensions" #require arguments
+
+# Lists files by extension
+`lsft` `.txt`
+
+# List only files, sort by extension 
+`sbft` `.txt`
+
+# List only files including hidden files, sort by extension
+`lsfth` `.txt`
+
+List files and folders and sort files by extensions
+`lsfta` `.txt`
+
+NOTE: See all aliases for this functionality in the script file.
+___
+
+
+### 5. **ls_open**
 
 - Enter in your terminal:\
   `ls_open`
@@ -144,7 +167,7 @@ Alernatively: `lsnav`, `nav`, `open`, `opendir`, `dopen`, `diropen`, `navigate`,
 
 ___
 
-### 5. **mount-unmount-drives**
+### 6. **mount-unmount-drives**
 
 #### `mount_external` and `unmount_external`
 
@@ -180,10 +203,19 @@ ___
 - Unmounted
 ![image](https://github.com/user-attachments/assets/47ab7f00-a8f5-4fe2-9dd4-716cc2d9a81c)
 
+
 ___
 
+### 7. **mv_files**
 
-### 6. **terminal_bookmarks**
+Move all files, excluding folders
+`mvfiles`
+
+Move all files and folders
+`mvall`
+
+
+### 8. **terminal_bookmarks**
 
 #### Set bookmark at current directory
 ```bookmark set 1```
