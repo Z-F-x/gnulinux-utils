@@ -15,6 +15,7 @@ alias open='ls_open'
 alias opendir='ls_open'
 alias dopen='ls_open'
 alias diropen='ls_open'
+alias navigate='ls_open'
 
 # Function to handle selecting and opening files or directories
 ls_open() {
