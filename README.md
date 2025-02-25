@@ -17,6 +17,8 @@ Mount and unmount external drives
 - `terminal_bookmarks` – 
 Bookmark file paths and navigate set bookmarks with the F1-F12-keys.
 
+---
+
 
 ## Installation
 
@@ -83,7 +85,9 @@ For **.bashrc**:
   
 4. Reload `.zshrc` to apply the changes:\
   ```source ~/.zshrc```
-  
+
+--- 
+ 
 
 ## Usage:
 
@@ -101,8 +105,10 @@ NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
 - Enter `vlc` and press **tab** to cycle select video files
 - Enter `vlc` and select vido file from fzf dropdown
 
-NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
+##### NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
+
 ---
+
 
 ### 2. **cdw**
 enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
@@ -116,6 +122,8 @@ Enter `cd` as you would normally.
 Expected result: 
 `clear` is ran screen and displays the content of file with `eza --icons`: 
 ![image](https://github.com/user-attachments/assets/94e0246a-297b-4199-834f-0b8f9838ffeb)
+
+---
 
 
 ### 4. **terminal_bookmarks**
@@ -137,14 +145,13 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 
 ![image](https://github.com/user-attachments/assets/a787bc80-668b-4399-9ee6-499947ab681a)
 <!-- TODO: Fix this issue -->
-NOTE: Known Issue.
-Formatting is not pretty.
-Will be fixed.
-
-
+- NOTE: Known Issue.  Formatting is not pretty.  Will be fixed.
 
 #### Go to bookmark via function-key(s)
 `F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, `F8`, `F9`, `F10`, `F11`, and `F12`.
+
+---
+
 
 ### 5. **mount-unmount-drives**
 
@@ -181,3 +188,6 @@ Will be fixed.
 
 - Unmounted
 ![image](https://github.com/user-attachments/assets/47ab7f00-a8f5-4fe2-9dd4-716cc2d9a81c)
+
+---
+
