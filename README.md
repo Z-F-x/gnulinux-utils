@@ -84,7 +84,7 @@ For **.bashrc**:
 
 ## Usage:
 
-### 1. `audio-and-video-playback`
+### 1. **audio-and-video-playback**
 
 #### Audio playback
 - Enter `play` `audioFileName.mp3`
@@ -99,10 +99,10 @@ NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
 NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 
 
-### 2. `cdw`
+### 2. **cdw**
 enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
 
-### 3. `terminal_bookmarks`
+### 3. **terminal_bookmarks**
 
 #### Set bookmark at current directory
 ```bookmark set 1```\
@@ -118,7 +118,7 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 #### Go to bookmark via function-key(s)
 F1, F2 F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
 
-### 4. `mount-unmount-drives`
+### 4. **mount-unmount-drives**
 
 #### `mount_external` and `unmount_external`
 
