@@ -12,10 +12,14 @@ Play audio and video directly in (audio) from (video) terminal.
 Track the 25 most used file paths
 - `ls_dynamic` – 
 Adds the `ls_dynamic` function when navigating with `cd`. It clears screen and runs eza with icons, which displays content of current path—relieving the user from having to run `dir`, `tree`, or `ls` manually to see the content of the navigated directory.
+- `ls_ft` –
+ List the content of current directory by file extension
 - `ls_open` –
 A function that displays all navigable subdirectories within the current directory. 
 - `mount-unmount-drives` – 
 Mount and unmount external drives
+- `mv_files` –
+shorthand for bulk moving all files and folders, all folders or all files respectively.
 - `terminal_bookmarks` – 
 Bookmark file paths and navigate set bookmarks with the F1-F12-keys.
 
