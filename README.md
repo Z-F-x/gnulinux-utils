@@ -1,4 +1,19 @@
+# gnulinux-utils
 A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment
+
+## Contents
+- `audio-and-video-playback`
+Play audio and video directly in (audio) from (video) terminal.
+
+- `cdw`
+Track the 25 most used file paths
+
+- `mount-unmount-drives`
+Mount and unmount external drives
+
+- `terminal_bookmarks` 
+Bookmark file paths and navigate set bookmarks with the F1-F12-keys.
+
 
 ## Installation
 
@@ -67,9 +82,26 @@ For **.bashrc**:
   ```source ~/.zshrc```
   
 
-# Usage:
+## Usage:
 
-## Mount an external drive
+### `terminal_bookmarks`
+
+#### Set bookmark at current directory
+```bookmark set 1```\
+NOTE: valid set options are `1` through `12` setting the set bookmark to the corresponding F-key.
+
+#### Go to bookmark via command
+```bookmark 1```
+
+#### See list of set bookmarks (Formatting is not prettty, will fix)
+```bookmark```
+
+
+#### Go to bookmark via function-key(s)
+F1, F2 F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
+
+
+### `mount_external` and `unmount_external`
 
 - Enter in your terminal:\
   `mount_external`
