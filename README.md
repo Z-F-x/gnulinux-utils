@@ -107,6 +107,9 @@ NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 ### 2. **cdw**
 enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
 
+![image](https://github.com/user-attachments/assets/0a03737d-9b00-4c0d-afe9-fe3bda0e2efe)
+
+
 ### 3. **ls_dynamic**
 Enter `cd` as you would normally. 
 
@@ -120,13 +123,24 @@ clears screen and displays the content of file with eza:
 #### Set bookmark at current directory
 ```bookmark set 1```
 
+![image](https://github.com/user-attachments/assets/1db9a700-a8ee-4146-b539-353a5130651e)
+
+
+
 NOTE: valid set options are `1` through `12` setting the set bookmark to the corresponding F-key.
 
 #### Go to bookmark via command
 ```bookmark 1```
 
-#### See list of set bookmarks (Formatting is not prettty, will fix)
+#### See list of set bookmarks
 ```bookmark```
+
+![image](https://github.com/user-attachments/assets/a787bc80-668b-4399-9ee6-499947ab681a)
+<!--
+NOTE: Known Issue.
+Formatting is not pretty.
+Will be fixed.
+-->
 
 
 #### Go to bookmark via function-key(s)
