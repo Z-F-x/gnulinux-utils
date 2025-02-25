@@ -1,11 +1,17 @@
+# gnulinux-utils
+A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment.
+
 > [!IMPORTANT]  
 > - `ls_dynamic` and `cdw` from `cdw.sh` and/or `ls_dynamic.sh` needs to be present in your shell config file in order to run the scripts to run.
 > - Proper keybindings must also be set up for `ls` and `cd` to run `ls_dynamic` and `cdw` respectively.
 
-# gnulinux-utils
-A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment.
+## Table of Contents
 
-## Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Introduction
 - `audio-and-video-playback` – 
 Play audio and video directly in (audio) from (video) terminal.
 - `cdw` – 
