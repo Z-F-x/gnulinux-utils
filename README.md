@@ -86,7 +86,7 @@ For **.bashrc**:
 4. Reload `.zshrc` to apply the changes:\
   ```source ~/.zshrc```
 
-___
+---
  
 
 ## Usage:
@@ -107,7 +107,7 @@ NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
 
 ##### NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 
----
+___
 
 
 ### 2. **cdw**
@@ -123,7 +123,7 @@ Expected result:
 `clear` is ran screen and displays the content of file with `eza --icons`: 
 ![image](https://github.com/user-attachments/assets/94e0246a-297b-4199-834f-0b8f9838ffeb)
 
----
+___
 
 
 ### 4. **terminal_bookmarks**
@@ -150,7 +150,7 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 #### Go to bookmark via function-key(s)
 `F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, `F8`, `F9`, `F10`, `F11`, and `F12`.
 
----
+___
 
 
 ### 5. **mount-unmount-drives**
@@ -189,5 +189,5 @@ NOTE: valid set options are `1` through `12` setting the set bookmark to the cor
 - Unmounted
 ![image](https://github.com/user-attachments/assets/47ab7f00-a8f5-4fe2-9dd4-716cc2d9a81c)
 
----
+___
 
