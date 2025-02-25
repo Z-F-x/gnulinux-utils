@@ -2,16 +2,16 @@
 A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment
 
 ## Contents
-- `audio-and-video-playback`
+- `audio-and-video-playback`\
 Play audio and video directly in (audio) from (video) terminal.
 
-- `cdw`
+- `cdw`\
 Track the 25 most used file paths
 
-- `mount-unmount-drives`
+- `mount-unmount-drives`\
 Mount and unmount external drives
 
-- `terminal_bookmarks` 
+- `terminal_bookmarks` \
 Bookmark file paths and navigate set bookmarks with the F1-F12-keys.
 
 
