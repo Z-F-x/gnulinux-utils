@@ -108,8 +108,10 @@ NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 enter `cdw` in terminal to view and select logged file paths. Paths are logged automatically with `cd`
 
 ### 3. **ls_dynamic**
-Enter `cd` as you would normally. Expected result: 
-clear screen and displays the content of file with eza: 
+Enter `cd` as you would normally. 
+
+Expected result: 
+clears screen and displays the content of file with eza: 
 ![image](https://github.com/user-attachments/assets/94e0246a-297b-4199-834f-0b8f9838ffeb)
 
 
