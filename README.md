@@ -93,8 +93,10 @@ For **.bashrc**:
 NOTE: Valid audio file formats are: `.wma`, `.mp3`, `.wav`, `.ogg`.
 
 
-#### Video playback
+#### Video playback 
 - Enter `vlc` `videoFileName.mp4`
+- Enter `vlc` and press **tab** to cycle select video files
+- Enter `vlc` and select vido file from fzf dropdown
 
 NOTE: Valid video file formats are: `.mp4'`, `.mkv`, `.avi`, `.mov`.
 
