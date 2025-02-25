@@ -10,6 +10,8 @@ A collection of shell scripts designed to automate system operations and enhance
 Play audio and video directly in (audio) from (video) terminal.
 - `cdw` – 
 Track the 25 most used file paths
+- `ls_dynamic` – 
+Clears screen and runs eza with icons; displays content of current path relieving the user from having to run `dir`, `tree`, or `ls` manually.
 - `mount-unmount-drives` – 
 Mount and unmount external drives
 - `terminal_bookmarks` – 
