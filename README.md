@@ -222,6 +222,8 @@ Move all files and folders
 `mvall`
 
 
+___
+
 ### 8. **terminal_bookmarks**
 
 #### Set bookmark at current directory
