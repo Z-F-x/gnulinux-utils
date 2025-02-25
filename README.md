@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> `ls_dynamic` and `cdw` from `cdw.sh` and/or `ls_dynamic.sh` needs to be installed into your shell config file in order to run properly.
+
 # gnulinux-utils
 A collection of shell scripts designed to automate system operations and enhance workflow within the GNU/Linux terminal environment
 
