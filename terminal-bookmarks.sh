@@ -1,7 +1,7 @@
 # --------------------------------------------------------------------------- #
 # ------------------------ B o o k m a r k s BEGIN -------------------------- #
 # --------------------------------------------------------------------------- #
-
+#
 # TODO: Legg til sjekk slik at du må confirm før du overskriver allerede eksisterende bookmark 
 # FIXME: Legg til funksjonalitet som når man godkjenner å overskrive en allerede eksisterende bokmerke så forskyves det bokmærke til bokmerket som påfølger
 # NOTE: <== Per nå så forskyves bare ett bokmerke, ikke hele arrayet
@@ -15,89 +15,89 @@ typeset -A bookmarks
 
 # Laster bokmerker fra filen
 load_bookmarks() {
-  echo "DEBUG: Starter load_bookmarks" >&2
+#  echo "DEBUG: Starter load_bookmarks" >&2
   bookmarks=()
-  echo "DEBUG: Sjekker om fil eksisterer: $BOOKMARK_FILE" >&2
+#  echo "DEBUG: Sjekker om fil eksisterer: $BOOKMARK_FILE" >&2
   if [ -f "$BOOKMARK_FILE" ]; then
-    echo "DEBUG: Fil finnes, leser med cat" >&2
+#    echo "DEBUG: Fil finnes, leser med cat" >&2
     while IFS="=" read -r key value || [[ -n "$key" ]]; do
-      echo "DEBUG: Leser linje: key=$key, value=$value" >&2
+#      echo "DEBUG: Leser linje: key=$key, value=$value" >&2
       [[ -n "$key" && -n "$value" ]] && bookmarks[$key]="$value"
     done < <(cat "$BOOKMARK_FILE")
-    echo "DEBUG: Fullførte lesing fra fil" >&2
+#    echo "DEBUG: Fullførte lesing fra fil" >&2
   fi
-  echo "DEBUG: Avslutter load_bookmarks" >&2
+#  echo "DEBUG: Avslutter load_bookmarks" >&2
 }
 
 # Lagrer bokmerker til filen
 save_bookmarks() {
-  echo "DEBUG: Starter save_bookmarks" >&2
-  echo "DEBUG: Sjekker skrivetillatelse for $BOOKMARK_FILE" >&2
+#  echo "DEBUG: Starter save_bookmarks" >&2
+#  echo "DEBUG: Sjekker skrivetillatelse for $BOOKMARK_FILE" >&2
   if [ ! -w "$BOOKMARK_FILE" ] && [ -e "$BOOKMARK_FILE" ]; then
-    echo "Feil: $BOOKMARK_FILE eksisterer, men er ikke skrivbar." >&2
+#    echo "Feil: $BOOKMARK_FILE eksisterer, men er ikke skrivbar." >&2
     return 1
   fi
-  echo "DEBUG: Sørger for at filen eksisterer" >&2
+#  echo "DEBUG: Sørger for at filen eksisterer" >&2
   if ! touch "$BOOKMARK_FILE" 2>/dev/null; then
     echo "Feil: Kunne ikke opprette eller oppdatere $BOOKMARK_FILE. Sjekk rettigheter." >&2
     return 1
   fi
-  echo "DEBUG: Tømmer filen" >&2
+#  echo "DEBUG: Tømmer filen" >&2
   if ! : > "$BOOKMARK_FILE" 2>/dev/null; then
     echo "Feil: Kunne ikke tømme $BOOKMARK_FILE. Sjekk rettigheter eller filstatus." >&2
     return 1
   fi
-  echo "DEBUG: Skriver til $BOOKMARK_FILE" >&2
+#  echo "DEBUG: Skriver til $BOOKMARK_FILE" >&2
   for key in ${(n)${(k)bookmarks}}; do
-    echo "DEBUG: Skriver linje: $key=${bookmarks[$key]}" >&2
+#    echo "DEBUG: Skriver linje: $key=${bookmarks[$key]}" >&2
     echo "$key=${bookmarks[$key]}" >> "$BOOKMARK_FILE" 2>/dev/null || {
       echo "Feil: Kunne ikke skrive til $BOOKMARK_FILE under oppdatering." >&2
       return 1
     }
   done
-  echo "DEBUG: Fullførte save_bookmarks" >&2
+#  echo "DEBUG: Fullførte save_bookmarks" >&2
 }
 
 # Flytter bokmerker oppover
 shift_bookmarks_from() {
   local num=$1
   local i
-  echo "DEBUG: Starter shift_bookmarks_from med num=$num" >&2
+#  echo "DEBUG: Starter shift_bookmarks_from med num=$num" >&2
   for i in ${(n)${(k)bookmarks}}; do
     if [[ $i -ge $num ]]; then
       bookmarks[$((i + 1))]="${bookmarks[$i]}"
     fi
   done
-  echo "DEBUG: Fullførte shift_bookmarks_from" >&2
+#  echo "DEBUG: Fullførte shift_bookmarks_from" >&2
 }
 
 # Setter et bokmerke
 set_bookmark() {
   local num=$1
-  echo "DEBUG: Starter set_bookmark med num=$num" >&2
+#  echo "DEBUG: Starter set_bookmark med num=$num" >&2
   if ! [[ "$num" =~ '^[0-9]+$' ]]; then
-    echo "Feil: '$num' er ikke et gyldig nummer." >&2
+#    echo "Feil: '$num' er ikke et gyldig nummer." >&2
     return 1
   fi
-  echo "DEBUG: Kaller load_bookmarks" >&2
+#  echo "DEBUG: Kaller load_bookmarks" >&2
   load_bookmarks
-  echo "DEBUG: load_bookmarks fullført" >&2
+#  echo "DEBUG: load_bookmarks fullført" >&2
   if [[ -n "${bookmarks[$num]}" ]]; then
-    echo "DEBUG: Bokmerke finnes, venter på input" >&2
+#    echo "DEBUG: Bokmerke finnes, venter på input" >&2
     read -u 0 "confirm?Bokmerke $num finnes allerede (mappe: ${bookmarks[$num]}). Overskriv og flytt eksisterende bokmerker oppover? (y/n): "
     if [[ "$confirm" != "y" ]]; then
       echo "Handling avbrutt." >&2
       return
     else
-      echo "DEBUG: Kaller shift_bookmarks_from" >&2
+#      echo "DEBUG: Kaller shift_bookmarks_from" >&2
       shift_bookmarks_from "$num"
     fi
   fi
-  echo "DEBUG: Setter bokmerke" >&2
+#  echo "DEBUG: Setter bokmerke" >&2
   bookmarks[$num]="$PWD"
-  echo "DEBUG: Lagrer bokmerker" >&2
+#  echo "DEBUG: Lagrer bokmerker" >&2
   save_bookmarks
-  echo "Bokmerke $num satt til $PWD" >&2
+#  echo "Bokmerke $num satt til $PWD" >&2
 }
 
 # Bytter til bokmerke
@@ -107,7 +107,7 @@ goto_bookmark() {
     echo "Feil: '$num' er ikke et gyldig nummer." >&2
     return 1
   fi
-  echo "DEBUG: Kaller load_bookmarks i goto_bookmark" >&2
+#  echo "DEBUG: Kaller load_bookmarks i goto_bookmark" >&2
   load_bookmarks
   if [[ -n "${bookmarks[$num]}" ]]; then
     if [[ -d "${bookmarks[$num]}" ]]; then
@@ -127,7 +127,7 @@ del_bookmark() {
     echo "Feil: '$num' er ikke et gyldig nummer." >&2
     return 1
   fi
-  echo "DEBUG: Kaller load_bookmarks i del_bookmark" >&2
+#  echo "DEBUG: Kaller load_bookmarks i del_bookmark" >&2
   load_bookmarks
   if [[ -n "${bookmarks[$num]}" ]]; then
     unset bookmarks[$num]
@@ -205,6 +205,9 @@ BOOKMARK_SET_KEYS=(
   7 "kf7"
   8 "kf8"
   9 "kf9"
+  10 "kf10"
+  11 "kf11"
+  12 "kf12"
 )
 
 # Funksjon for å definere og binde hotkeys
@@ -223,9 +226,9 @@ setup_bookmark_hotkeys() {
     local key="${terminfo[${BOOKMARK_SET_KEYS[$num]}]}"
     if [[ -n "$key" ]]; then
       bindkey "$key" "bookmark-goto-$num"
-      echo "DEBUG: Bundet F$num til bookmark-goto-$num (navigerer til bokmerke $num)" >&2
+#      echo "DEBUG: Bundet F$num til bookmark-goto-$num (navigerer til bokmerke $num)" >&2
     else
-      echo "Advarsel: Ingen terminfo-verdi for F$num. Hotkey ble ikke bundet." >&2
+#      echo "Advarsel: Ingen terminfo-verdi for F$num. Hotkey ble ikke bundet." >&2
     fi
   done
 }
@@ -235,4 +238,6 @@ setup_bookmark_hotkeys
 
 # --------------------------------------------------------------------------- #
 # ------------------------- B o o k m a r k s END --------------------------- #
+# --------------------------------------------------------------------------- #
+# --------------- T e r m i n a l   C a l c u l a t o r  BEGIN -------------- #
 # --------------------------------------------------------------------------- #
