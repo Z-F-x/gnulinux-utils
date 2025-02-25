@@ -86,8 +86,8 @@ For **.bashrc**:
 4. Reload `.zshrc` to apply the changes:\
   ```source ~/.zshrc```
 
----
- 
+
+<hr style="height: 1px;">
 
 ## Usage:
 
