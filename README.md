@@ -87,7 +87,7 @@ For **.bashrc**:
   ```source ~/.zshrc```
 
 
-<hr style="height: 1px;">
+<hr style="height: 0.5px;">
 
 ## Usage:
 
