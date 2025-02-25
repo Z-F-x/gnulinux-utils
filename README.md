@@ -139,16 +139,16 @@ alias sbft="list_files_sort_extension" #c
 alias lsfth="list_files_sort_extension_hidden" #Lits only files by extension including hidden files, requires argument.
 alias lsfta="list_files_and_folders_sort_by_extensions" #require arguments
 
-# Lists files by extension
+#### Lists files by extension
 `lsft` `.txt`
 
-# List only files, sort by extension 
+#### List only files, sort by extension 
 `sbft` `.txt`
 
-# List only files including hidden files, sort by extension
+#### List only files including hidden files, sort by extension
 `lsfth` `.txt`
 
-List files and folders and sort files by extensions
+#### List files and folders and sort files by extensions
 `lsfta` `.txt`
 
 NOTE: See all aliases for this functionality in the script file.
