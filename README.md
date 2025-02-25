@@ -114,7 +114,7 @@ enter `cdw` in terminal to view and select logged file paths. Paths are logged a
 Enter `cd` as you would normally. 
 
 Expected result: 
-clears screen and displays the content of file with eza: 
+`clear` is ran screen and displays the content of file with `eza --icons`: 
 ![image](https://github.com/user-attachments/assets/94e0246a-297b-4199-834f-0b8f9838ffeb)
 
 
@@ -144,7 +144,7 @@ Will be fixed.
 
 
 #### Go to bookmark via function-key(s)
-F1, F2 F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
+`F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, `F8`, `F9`, `F10`, `F11`, and `F12`.
 
 ### 5. **mount-unmount-drives**
 
