@@ -134,6 +134,7 @@ ___
   `ls_open`
 
 ![image](https://github.com/user-attachments/assets/864afff5-2c47-45c0-af8c-8a009dbf7c18)
+- Hit enter to navigate
 
 Alernatively: `lsnav`, `nav`, `open`, `opendir`, `dopen`, `diropen`, `navigate`
 
