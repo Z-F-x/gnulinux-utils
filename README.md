@@ -17,11 +17,11 @@ Bookmark file paths and navigate set bookmarks with the F1-F12-keys.
 
 ## Installation
 
-### Option 1
+### Option 1 Copy and paste into shell config file
 
 Copy paste the content of the files into either your `.bashrc` or your `.zshrc` depending on what **shell** you are using.
 
-### Option 2
+### Option 2 import scripts into shell config file
 
 - make a new directory in your home directory, call it `gnulinux-utils`, for instance.\
   `mkdir` `~/gnulinux-utils`
@@ -59,7 +59,7 @@ Copy paste the content of the files into either your `.bashrc` or your `.zshrc` 
 9. Verify that only mount-unmount-drives.sh is left\
 `ls *.sh`
 
-### Option 4: Install all scripts
+### Option 4: Install all scripts by appending all files in repo 
 
 Clone the repo in your home directory (this is the way I've set it up but you can place it wherever you like as long as you link it to the correct path in your ur `.bashrc` or your `.zshrc` i.e., your shell config files.
 
@@ -105,7 +105,8 @@ enter `cdw` in terminal to view and select logged file paths. Paths are logged a
 ### 3. **terminal_bookmarks**
 
 #### Set bookmark at current directory
-```bookmark set 1```\
+```bookmark set 1```
+
 NOTE: valid set options are `1` through `12` setting the set bookmark to the corresponding F-key.
 
 #### Go to bookmark via command
